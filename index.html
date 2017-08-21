@@ -578,7 +578,7 @@
     					if($(this).children('.bg_current').css('display') == 'none'){
     						Dom.bg_current.css('display','none');
     						$(this).children('.bg_current').css('display','block');
-    					 } 
+    					 } /*先找到并全部设为none，当前再设置block属性让外圈可见*/
     					 var index = $(this).index();  //index()没有传递参数，它的意思是返回同辈的排列循序，第一个bg_set之前有span元素,同辈元素是span开始为0，所以bg_set的开始索引是1
     					 Util.StorageSetter('index', index-1);
     					 var colorVal = colorArr[index-1];
